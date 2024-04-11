@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football </title>
+    <style>
+               body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://png.pngtree.com/background/20210710/original/pngtree-world-cup-passion-vs-cool-background-design-picture-image_978904.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #fff;
+        }
+
+       header {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px 0;
+            text-align: center;
+            animation: move 10s linear infinite; /* Animation */
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #fff;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #333;
+        }
+
+        tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+       @keyframes fadeInFromBottom {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container table {
+            animation: fadeInFromBottom 3s ease-out;
+        }
+         
+ </style>
+</head>
+
+<body>
+    <header>
+        <h1>FIFA World cup 2023</h1>
+    </header>
+    <div class="container">
+        <h2>Upcoming Matches</h2>
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Match</th>
+                <th>Location</th>
+            </tr>
+            <tr>
+                <td>April 15, 2023</td>
+                <td>Argentina vs. France</td>
+                <td>Estadio Azteca, Mexico</td>
+            </tr>
+            <tr>
+                <td>April 17, 2023</td>
+                <td>Belgium vs. England</td>
+                <td>Santiago Bernabeu, Spain</td>
+            </tr>
+            
+        </table>
+        <h2>Leaderboard</h2>
+        <table>
+            <tr>
+                <th>Rank</th>
+                <th>Team</th>
+                <th>Points</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Argentina</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>France</td>
+                <td>20</td>
+            </tr>
+            
+        </table>
+    </div>
+</body>
+
+</html>

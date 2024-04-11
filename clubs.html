@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Football Mania - Clubs</title>
+  <link rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <nav class="navigation">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li class="active"><a href="clubs.html">Clubs</a></li>
+          <li><a href="#">World Cup 2023</a></li>
+          <li><a href="#">Upcoming Matches</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <h1>Our Featured Teams From Top Leagues of The World</h1>
+
+      <section class="team-section">
+        <div class="team">
+          <img src="team1.png" alt="Team 1 Logo">
+          <h3>FC BARCELONA</h3>
+          <p>Regarded as Kings of Spanish Football, A powerhouse in Laliga.</p>
+          <a href="#">View Team Profile</a>
+        </div>
+
+        <div class="team">
+          <img src="team2.jpg" alt="Team 2 Logo">
+          <h3>BAYERN MUNICH</h3>
+          <p>Highly Regarded as the best Team in the Bundesliga.</p>
+          <a href="#">View Team Profile</a>
+        </div>
+        
+        <div class="team">
+          <img src="team3.png" alt="Team 3 Logo">
+          <h3>MANCHESTER CITY</h3>
+          <p>Dominaton of the Highest order in The Premier League.</p>
+          <a href="#">View Team Profile</a>
+        </div>
+
+        <div class="team">
+          <img src="team4.png" alt="Team 4 Logo">
+          <h3>PSG</h3>
+          <p>Regarded as the Best team in France.</p>
+          <a href="#">View Team Profile</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; Football Mania 2024</p>
+    </div>
+  </footer>
+</body>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #140097;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .header {
+    background-color: #ffffff;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navigation {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navigation li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  .navigation a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+
+  .navigation a:hover {
+    color: #000;
+  }
+
+  .navigation .active a {
+    color: #007bff; /* Change active link color */
+  }
+
+  main {
+    flex: 1;
+    padding-top: 50px;
+  }
+
+  .main h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ffffff; /* Team title color */
+  }
+
+  .team-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+
+  .team {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    transition: background-color 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  }
+
+  .team:hover {
+    background-color: #e0e0e0;
+    cursor: pointer;
+  }
+
+  .team img {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .team h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #007bff; /* Team name color */
+  }
+
+  .team p {
+    margin-bottom: 15px;
+    font-size: 0.9em;
+    color: #666; /* Description text color */
+  }
+
+  .team a {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  .team a:hover {
+    background-color: #0069d9;
+  }
+
+  .footer {
+    background-color: #f2f2f2;
+    padding: 10px 0;
+    margin-top: auto; /* Push footer to bottom */
+  }
+</style>
+</html>

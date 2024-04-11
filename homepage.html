@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+    <script src="https://cdn.jsdelivr.net/npm/ @rapidapi/rapidapi-connect @ 5.4.3/dist/connect.min.js"></script>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Website</title>
+    <link rel="shortcut icon" href="iconimage.png" type="image/x-icon">
+
+    <!-- tailwind and daisy ui cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.3.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- google font poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<!-- tailwind custom class -->
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    clifford: '#da373d',
+                    'body-color': '#071952',
+                    'btn-color': '#75C2F6',
+                }
+            }
+        }
+    }
+</script>
+
+<style>
+    .font-poppins {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .background {
+        background-image: url(bannerimage.jpg);
+        background-repeat: repeat;
+        background-attachment: fixed;
+        background-size: contain;
+    }
+</style>
+
+<body class="font-poppins bg-body-color">
+    <!-- header section -->
+    <header>
+        <!-- nav section -->
+        <nav class="mx-5">
+            <div class="navbar bg-white container mx-auto rounded-3xl shadow-2xl flex justify-between">
+                <div>
+                    <div class="dropdown">
+                        <label tabindex="0" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </label>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a>Home</a></li>
+                            <li><a>Clubs</a></li>
+                            <li><a>World Cup 2023</a></li>
+                            <li><a>Upcoming Matches</a></li>
+                            <li><a>Contact</a></li>
+                            <li>
+                                <div class="btn flex bg-body-color border-0 w-28">
+                                    <img class="w-5" src="images/Social Icons/login.png" alt="">
+                                    <p class="text-white font-bold bg-">Login</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <a class="btn btn-ghost normal-case text-xl"><img class="w-10 h-auto" src="topleftimage.png" alt=""></a>
+                </div>
+
+                <div class="hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1 font-bold">
+                        <li><a>Home</a></li>
+                        <li><a>Clubs</a></li>
+                        <li><a>World Cup 2023</a></li>
+                        <li><a>Upcoming Matches</a></li>
+                        <li><a>Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <a href="registration.html" class="btn btn-ghost normal-case text-xl">Register</a>
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- banner section -->
+        <section class="mx-5">
+            <div class="container mx-auto">
+                <div class="flex justify-between flex-col lg:flex-row">
+                    <div class=" lg:py-44 py-24">
+                        <h1 class="text-5xl lg:text-7xl font-bold text-center lg:text-start text-white">Join Now to<br>
+                            Follow your Favourite Teams<br>
+                            </h1>
+                        <p class="py-6 text-white text-center lg:text-start">Provident cupiditate voluptatem et in.
+                            Quaerat fugiat <br> ut
+                            assumenda
+                            excepturi
+                            exercitationem
+                            quasi. In deleniti eaque <br> aut repudiandae et a id nisi.</p>
+                        <div class="flex justify-center lg:justify-start">
+                            <div class="btn bg-btn-color border-0 w-44">
+                                <p class="text-white font-bold">Watch Live</p>>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110">
+                        <a href="upcoming.html">
+                            <img src="banner.jpg" class="lg:max-w-3xl lg:mt-16" />
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+    </header>
+
+
+    <!-- main section -->
+    <main>
+        <!-- card section -->
+        <section class="mx-5">
+            <div class="container mx-auto mt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- card-1 -->
+                <div class="card bg-base-100 shadow-xl">
+                    <figure>
+                        <img class="p-5 hover:animate-pulse" src="images/players/player-1.png" alt="" />
+                    </figure>
+                    <div class="p-5 mb-6">
+                        <h2 class="text-3xl font-bold mb-5">Neymar Jr</h2>
+                        <p>Known for his exceptional dribbling skills and creativity on the field, Neymar Jr is a Brazilian forward who has made a significant impact in the world of football with his flair and agility.</p>
+                    </div>
+                </div>
+
+                <!-- card-2 -->
+                <div class="card bg-base-100 shadow-xl">
+                    <figure>
+                        <img class="p-5 hover:animate-pulse" src="images/players/player-2.png" alt="" />
+                    </figure>
+                    <div class="p-5 mb-6">
+                        <h2 class="text-3xl font-bold mb-5">Lionel Messi</h2>
+                        <p>Often hailed as one of the greatest footballers of all time, Lionel Messi is an Argentine forward renowned for his extraordinary dribbling ability, vision, and goal-scoring prowess.</p>
+                    </div>
+                </div>
+
+                <!-- card-3 -->
+                <div class="card bg-base-100 shadow-xl">
+                    <figure>
+                        <img class="p-5 hover:animate-pulse" src="images/players/player-3.png" alt="" />
+                    </figure>
+                    <div class="p-5 mb-6">
+                        <h2 class="text-3xl font-bold mb-5">Cristiano Ronaldo</h2>
+                        <p>A Portuguese forward with unparalleled athleticism and goal-scoring ability, Cristiano Ronaldo is a football icon celebrated for his dedication, work ethic, and remarkable aerial prowess.</p>
+                    </div>
+                </div>
+
+                <!-- card-4 -->
+                <div class="card bg-base-100 shadow-xl">
+                    <figure>
+                        <img class="p-5 hover:animate-pulse" src="images/players/player-4.png" alt="" />
+                    </figure>
+                    <div class="p-5 mb-6">
+                        <h2 class="text-3xl font-bold mb-5">Paulo Dybala</h2>
+                        <p>A versatile Argentine forward known for his elegant playing style and precise finishing, Paulo Dybala possesses exceptional technical skills and has earned a reputation as one of the most promising talents in football.</p>
+                    </div>
+                </div>
+
+                <!-- card-5 -->
+                <div class="card bg-base-100 shadow-xl">
+                    <figure>
+                        <img class="p-5 hover:animate-pulse" src="images/players/player-5.png" alt="" />
+                    </figure>
+                    <div class="p-5 mb-6">
+                        <h2 class="text-3xl font-bold mb-5">Mesut Ozil</h2>
+                        <p>A German playmaker known for his vision, creativity, and precise passing, Mesut Ozil has mesmerized football fans worldwide with his ability to unlock defenses and orchestrate attacking plays.</p>
+                    </div>
+                </div>
+
+                <!-- card-6 -->
+                <div class="card bg-base-100 shadow-xl">
+                    <figure>
+                        <img class="p-5 hover:animate-pulse" src="images/players/player-6.png" alt="" />
+                    </figure>
+                    <div class="p-5 mb-6">
+                        <h2 class="text-3xl font-bold mb-5">Mauro Icardi</h2>
+                        <p>A prolific Argentine striker known for his clinical finishing and predatory instincts inside the box, Mauro Icardi has established himself as a lethal goal scorer throughout his career.</p>
+                    </div>
+                </div>
+
+                <!-- card-7 -->
+                <div class="card bg-base-100 shadow-xl">
+                    <figure>
+                        <img class="p-5 hover:animate-pulse" src="images/players/player-7.png" alt="" />
+                    </figure>
+                    <div class="p-5 mb-6">
+                        <h2 class="text-3xl font-bold mb-5">Di Maria</h2>
+                        <p>An Argentine winger renowned for his speed, dribbling ability, and crossing prowess, Angel Di Maria has showcased his talent at top clubs around the world, contributing significantly to their attacking play.</p>
+                    </div>
+                </div>
+
+                <!-- card-8 -->
+                <div class="card bg-base-100 shadow-xl">
+                    <figure>
+                        <img class="p-5 hover:animate-pulse" src="images/players/player-8.png" alt="" />
+                    </figure>
+                    <div class="p-5 mb-6">
+                        <h2 class="text-3xl font-bold mb-5">Kylian Mbappé</h2>
+                        <p>A French forward blessed with lightning pace, exceptional dribbling skills, and clinical finishing ability, Kylian Mbappe has emerged as one of the brightest talents in world football, with a promising future ahead.</p>
+                    </div>
+                </div>
+
+                <!-- card-9 -->
+                <div class="card bg-base-100 shadow-xl">
+                    <figure>
+                        <img class="p-5 hover:animate-pulse" src="images/players/player-9.png" alt="" />
+                    </figure>
+                    <div class="p-5 mb-6">
+                        <h2 class="text-3xl font-bold mb-5">Mohamed Salah</h2>
+                        <p>An Egyptian forward known for his explosive speed, agility, and goal-scoring prowess, Mohamed Salah has enjoyed tremendous success at both club and international level, captivating fans with his electrifying performances.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- All Highlights section -->
+        <section class=" background">
+            <div class="mx-5">
+                <div class="container mx-auto">
+                    <div class="flex flex-col lg:flex-row my-32 lg:mt-44 py-24">
+                        <div class="text-white flex-1 flex flex-col justify-center text-center lg:text-start">
+                            <h2 class="text-5xl font-bold my-8 text-center lg:text-start">Exclusive Access<br>
+                                To Champions League Matches</h2>
+                            <p>Get Live Match Data</p>
+                             <div class="flex justify-center lg:justify-start">
+                                <div class="btn bg-btn-color border-0 my-10 w-44">
+                                    <p class="text-white font-bold">Track Now</p>
+                                </div>
+                        </div>
+                        <div class="flex-1">
+                            <img class="rounded-2xl" src="banner.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- winner team section -->
+        <section class="mx-5">
+            <div class="container mx-auto mb-28">
+                <div class="text-white flex-1 flex flex-col my-16">
+                    <h2 class="text-5xl font-bold my-8 text-center">2021 Winner team Argentina</h2>
+                    <p class="text-center">Argentina won the match 1–0 to clinch their fifteenth Copa América title and
+                        first since 1993, giving captain Lionel
+                        Messi <br> his first senior international trophy sixteen years into his career and ending a
+                        28-year
+                        trophy drought..</p>
+                </div>
+
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                    <!-- image-1 -->
+                    <div class="shadow-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110">
+                        <figure><img class="w-full rounded-2xl" src="bannerimage.jpg" alt="" /></figure>
+                    </div>
+
+                    <!-- image-2 -->
+                    <div class="shadow-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110">
+                        <figure><img class="w-full rounded-2xl" src="images/players/player-2.png" alt="" /></figure>
+                    </div>
+
+                    <!-- image-3 -->
+                    <div class="shadow-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110">
+                        <figure><img class="w-full rounded-2xl" src="images/players/player-3.png" alt="" /></figure>
+                    </div>
+
+                    <!-- image-4 -->
+                    <div class="shadow-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110">
+                        <figure><img class="w-full rounded-2xl" src="images/players/player-4.png" alt="" /></figure>
+                    </div>
+
+                    <!-- image-5 -->
+                    <div class="shadow-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110">
+                        <figure><img class="w-full rounded-2xl" src="images/players/player-5.png" alt="" /></figure>
+                    </div>
+
+                    <!-- image-6 -->
+                    <div class="shadow-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110">
+                        <figure><img class="w-full rounded-2xl" src="images/players/player-6.png" alt="" /></figure>
+                    </div>
+
+                    <!-- image-7 -->
+                    <div class="shadow-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110">
+                        <figure><img class="w-full rounded-2xl" src="images/players/player-7.png" alt="" /></figure>
+                    </div>
+
+                    <!-- image-8 -->
+                    <div class="shadow-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110">
+                        <figure><img class="w-full rounded-2xl" src="images/players/player-8.png" alt="" /></figure>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Top Matches Highlights -->
+        <section class="mx-5">
+            <div class=" container mx-auto mb-28">
+                <div class="text-white flex-1 flex flex-col my-16">
+                    <h2 class="text-5xl font-bold my-8 text-center">Top Matches Highlights</h2>
+                    <p class="text-center">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+                        sint. <br>
+                        Velit officia
+                        consequat
+                        duis enim velit
+                        mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <!-- card-1 -->
+                    <div class="card bg-base-100 shadow-xl">
+                        <div class="p-5">
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/gUOPOXo50pU"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="p-5 mb-6">
+                            <h2 class="text-3xl font-bold mb-5">Argentina Vs Brasil</h2>
+                            <p>Copa America Final 2021, Argentina vs Brazil Highlights: Argentina beat Brazil 1-0 in
+                                Copa
+                                America final</p>
+                        </div>
+                    </div>
+
+
+                    <!-- card-2 -->
+                    <div class="card bg-base-100 shadow-xl">
+                        <div class="p-5">
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/h4m68r8kWAc"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="p-5 mb-6">
+                            <h2 class="text-3xl font-bold mb-5">FCB Vs PSG</h2>
+                            <p>FCB overcame a four-goal deficit in the second leg of their 2016–17 UEFA Champions League
+                                against PSG.</p>
+                        </div>
+                    </div>
